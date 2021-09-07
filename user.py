@@ -1,3 +1,4 @@
+
 class User:
     '''
     initialize class user
@@ -12,5 +13,14 @@ class User:
         '''
         self.username=username
         self.password=password
+    
+    def save_user (self):
+        """
+        A method to saves a new user instace into the user
+        """
+        User.user.append(self)
 
-        pass
+
+     @classmethod
+    def show_users(show):
+        return show.user
