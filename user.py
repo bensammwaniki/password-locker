@@ -38,7 +38,7 @@ class Credentials():
     """
     credentials_list = []
     @classmethod
-    def verify_user(cls,username, password):
+    def verify_user(show,username, password):
         """
         verify if the user is in our user_list 
         """
@@ -48,22 +48,31 @@ class Credentials():
                     a_user == user.username
         return a_user
 
-    def __init__(self,account,userName, password):
+    def __init__(self,account,username, password):
         """
         method that defines user credentials to be stored
         """
         self.account = account
-        self.userName = userName
+        self.userName = username
         self.password = password
     
     def save_details(self):
         """
-        method to store a new credential to the credentials list
+        store a new credential
         """
         Credentials.credentials_list.append(self)
 
-    def delete_credentials(self):
+    def deleteusercredentials(self):
         """
-        delete_credentials method that deletes an account credentials from the credentials_list
+        delete user credentials
         """
-        Credentials.credentials_list.remove(self)   
+        Credentials.credentials_list.remove(self)
+    @classmethod
+    def searchcredential(show, account):
+        """
+        Method that takes in a account_name and returns the details matching that account_name.
+        """
+        for match in show.credentials_list:
+            if match.account == account:
+                return match   
+                
