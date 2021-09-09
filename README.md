@@ -29,7 +29,7 @@ code .
 To run the application, open the cloned file in terminal and run the following commands:
 
   $ ./user_interface.py
-To run test for the application $ python3 passlock_test.py
+To run test for the application $ python3 
 
 ## Technology used
 
