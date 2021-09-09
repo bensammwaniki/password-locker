@@ -3,7 +3,7 @@
 ## Author ##
 Benson Njoroge Mwaniki 
 ## Description ##
-This is a python application to show case the level of pyton undertanding.This aplication allows user to create and even generate password. The main popurse behind the creation of the app is to help us the user seve his oher password in it since one might have diffrent acounts, with this app it is easier to manage them.
+This is a python application to showcase the level of python understanding. This application allows users to create and even generate passwords. The main purpose behind the creation of the app is to help the user save his or her password in it since one might have different accounts, with this app it is easier to manage them.
 
 ## preview of the app
 
