@@ -77,9 +77,9 @@ def passlocker():
             else:
                 print("Invalid password please try again")
         saveUser(new_user(username,password))
-        print("*"*85)
+        print("="*85)
         print(f"Hello {username}, Your account has been created succesfully!")
-        print("*"*100)
+        print("|="*80)
     elif short_code == "li":
         print("*"*50)
         print("Enter your Username and your Password to log in:")
