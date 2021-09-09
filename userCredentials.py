@@ -11,3 +11,4 @@ class test_class(unittest.TestCase):
     def test_init(self):
         self.assertEqual(self.new_user.username,'bnm')
         self.assertEqual(self.new_user.password,'1234zxcvb')
+        
