@@ -88,10 +88,10 @@ def passlocker():
         password = input("password: ")
         login = login_user(username,password)
         if login_user == login:
-            print(f"Hello {username}.Welcome To Passlock")  
+            print(f"Hello {username}.Welcome To Passlock.\nThis is your pass word{password}")  
             print('\n')
     while True:
-        print("Use these short codes:\n CC - Create a new credential \n DC - Display Credentials \GP - Generate A randomn password \n DEL - Delete credential \n EX - Exit the application \n")
+        print("Hi {username} use these short codes to access the data :\n CC - Create a new credential \n DC - Display Credentials \GP - Generate A randomn password \n DEL - Delete credential \n EX - Exit the application \n")
         short_code = input().lower().strip()
         if short_code == "cc":
             print("Create New Credential")
