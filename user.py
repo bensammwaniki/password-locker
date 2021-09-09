@@ -17,7 +17,7 @@ class User:
         self.username=username
         self.password=password
     
-    def save_user (self):
+    def save_user(self):
         """
         A method to saves a new user instace into the user
         """
