@@ -6,7 +6,7 @@ class User:
     '''
     initialize class user
     '''
-    user = []
+    user_item = []
     def __init__(self,username,password):
         '''
         Args:
@@ -21,19 +21,18 @@ class User:
         """
         A method to saves a new user instace into the user
         """
-        User.user.append(self)
-
+        User.user_item.append(self)
 
     @classmethod
     def show_users(show):
-        return show.user
+        return show.user_item
 
 
     def delete_user(self):
         '''
         delete method deletes an account from the users list
         '''
-        User.user.remove(self)
+        User.user_item.remove(self)
 
 class Credentials():
     """
@@ -46,7 +45,7 @@ class Credentials():
         verify if the user is in our user_list 
         """
         a_user = ""
-        for user in User.user_list:
+        for user in User.user_item:
             if(user.username == username and user.password == password):
                     a_user == user.username
         return a_user
@@ -94,11 +93,11 @@ class Credentials():
              return False     
 
     @classmethod
-    def display_credentials(cls):
+    def display_credentials(show):
         """
         Method that returns all items in the credentials list
         """
-        return cls.credentials_list
+        return show.credentials_list
 
     def generatePassword(stringLength=8):
         """Generate a random password string of letters and digits and special characters"""

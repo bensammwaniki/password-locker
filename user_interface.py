@@ -19,7 +19,7 @@ def display_user():
     """
     display existing user
     """
-    return User.display_user()   
+    return User.show_users()   
 
 def login_user(username,password):
     """
@@ -39,7 +39,7 @@ def save_credentials(credentials):
     """
     Function to save Credentials to the credentials list
     """
-    credentials. save_details()
+    credentials.save_details()
 
 def generate_Password():
     '''
@@ -56,7 +56,7 @@ def find_credential(account):
     """
     Function that finds a Credentials by an account 
     """
-    return Credentials.find_credential(account)    
+    return Credentials.searchcredential(account)    
 
 def passlocker():
     print("Hello Please enter one of the following short code to proceed.\n CA ---  Create New Account  \n HA ---  Have An Account  \n")
@@ -79,7 +79,7 @@ def passlocker():
         saveUser(new_user(username,password))
         print("="*85)
         print(f"Hello {username}, Your account has been created succesfully!")
-        print("|="*80)
+        print("="*50)
     elif short_code == "li":
         print("*"*50)
         print("Enter your Username and your Password to log in:")
@@ -91,7 +91,7 @@ def passlocker():
             print(f"Hello {username}.Welcome To Passlock.\nThis is your pass word{password}")  
             print('\n')
     while True:
-        print("Hi {username} use these short codes to access the data :\n CC - Create a new credential \n DC - Display Credentials \GP - Generate A randomn password \n DEL - Delete credential \n EX - Exit the application \n")
+        print("Hi use these short codes to access the data :\n CC - Create a new credential \n DC - Display Credentials \n GP - Generate A randomn password \n DEL - Delete credential \n EX - Exit the application \n")
         short_code = input().lower().strip()
         if short_code == "cc":
             print("Create New Credential")
@@ -133,7 +133,7 @@ def passlocker():
             if find_credential(search_name):
                 search_credential = find_credential(search_name)
                 print("_"*50)
-                search_credential.delete_credentials()
+                search_credential.deleteusercredentials()
                 print('\n')
                 print(f"Your stored credentials for : {search_credential.account} successfully deleted!!!")
                 print('\n')
@@ -144,11 +144,10 @@ def passlocker():
             password = generate_Password()
             print(f" {password} Has been generated succesfull. You can proceed to use it to your account")
         elif short_code == 'ex':
-            print("Thanks for using passwords store manager.. See you next time!")
+            print("Thanks for using passlocker.. See you next time!")
             break
         else:
-            print("Wrong entry... Check your entry again and let it match those in the menu")
-    else:
-        print("Please enter a valid input to continue")   
+            print("Sorry Check your entry and try again")
+
 if __name__ == '__main__':
     passlocker()     
