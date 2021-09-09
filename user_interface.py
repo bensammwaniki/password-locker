@@ -29,3 +29,21 @@ def login_user(username,password):
     check_user = Credentials.verify_user(username,password)
     return check_user   
 
+def create_new_credential(account,userName,password):
+    """
+    creates new credentials
+    """
+    new_credential = Credentials(account,userName,password)
+    return new_credential
+
+def generate_Password():
+    '''
+    generates a random password for the user.
+    '''
+    auto_password=Credentials.generatePassword()
+    return auto_password
+def copy_password(account):
+    """
+    A function that copies the password .
+    """
+    return Credentials.copy_password(account)
