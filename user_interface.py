@@ -113,7 +113,7 @@ def passlocker():
                     print("Invalid password please try again")
             save_credentials(create_new_credential(account,userName,password))
             print('\n')
-            print(f"Account Credential for: {account} - UserName: {userName} - Password:{password} created succesfully")
+            print(f"Account Credential for: {account} - UserName: {userName} \n\n- Password:{password} created succesfully")
             print('\n')
         elif short_code == "dc":
             if display_user():
