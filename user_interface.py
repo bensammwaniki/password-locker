@@ -1,15 +1,6 @@
 from user import User,Credentials
 
 
-def function():
-	print("               ____                                                      ")
-	print("              |  _ \                    ||||                             ")
-	print("              | |_) )  ____  ___   ___  ||||                             ")
-	print("              |  __/  / _  |/ __  / __  ||||                             ")
-	print("              | |    / (_| |\__ \ \__ \ ||||________                     ")
-	print("              |_|    \_____| ___/  ___/ ||||________|                    ")
-function()
-
 def new_user(username,password):
     """
     function to create  new user
@@ -32,8 +23,9 @@ def display_user():
 
 def login_user(username,password):
     """
-    function that checks whether a user exist and then login the user in.
+    function that checks whether a user exist and then login the user.
     """
   
     check_user = Credentials.verify_user(username,password)
     return check_user   
+
